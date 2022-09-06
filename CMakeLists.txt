@@ -28,6 +28,10 @@ option( RAKNET_ENABLE_SAMPLES 	"Generate RakNet sample projects if true." 		TRUE
 option( RAKNET_ENABLE_DLL		"Generate the DLL project if true." 			TRUE )
 option( RAKNET_ENABLE_STATIC	"Generate the static library project if true." 	TRUE )
 option( RAKNET_GENERATE_INCLUDE_ONLY_DIR "Setup a include/RakNet/ directory in which all the headers are copied." FALSE )
+option( RAKNET_ENABLE_SWIG		"Generate the Swig project if true." 			FALSE )
+if(RAKNET_ENABLE_SWIG)
+	set(SWIG_EXECUTABLE_FOLDER "" CACHE PATH	"Swig execute file folder")
+endif(RAKNET_ENABLE_SWIG)
 
 set( RAKNETHEADERFILES ${RakNet_SOURCE_DIR}/Source ) #This name doesn't follow CMake conventions but for retro compatibility I'll let it there.
 

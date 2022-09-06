@@ -14,3 +14,7 @@ endif()
 if( RAKNET_ENABLE_DLL )
 	add_subdirectory(DLL)
 endif()
+
+if(RAKNET_ENABLE_SWIG)
+	add_subdirectory(Swig)
+endif()

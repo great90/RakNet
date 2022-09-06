@@ -1,0 +1,42 @@
+diff -u -r SwigOutput1/CplusDLLIncludes/RakNet_wrap.cxx SwigOutput/CplusDLLIncludes/RakNet_wrap.cxx
+--- SwigOutput/CplusDLLIncludes/RakNet_wrap.cxx	2022-09-05 17:36:36.130875700 +0800
++++ SwigOutput1/CplusDLLIncludes/RakNet_wrap.cxx	2022-09-05 17:41:00.817745000 +0800
+@@ -7144,28 +7144,6 @@
+ }
+ 
+ 
+-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNet_OpPlus__SWIG_1(void * jarg1, void * jarg2) {
+-  void * jresult ;
+-  RakNet::RakWString *arg1 = 0 ;
+-  RakNet::RakWString *arg2 = 0 ;
+-  RakNet::RakWString result;
+-  
+-  arg1 = (RakNet::RakWString *)jarg1;
+-  if (!arg1) {
+-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "RakNet::RakWString const & type is null", 0);
+-    return 0;
+-  } 
+-  arg2 = (RakNet::RakWString *)jarg2;
+-  if (!arg2) {
+-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "RakNet::RakWString const & type is null", 0);
+-    return 0;
+-  } 
+-  result = operator +((RakNet::RakWString const &)*arg1,(RakNet::RakWString const &)*arg2);
+-  jresult = new RakNet::RakWString((const RakNet::RakWString &)result); 
+-  return jresult;
+-}
+-
+-
+ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNet_BitStream_GetInstance() {
+   void * jresult ;
+   RakNet::BitStream *result = 0 ;
+@@ -15472,7 +15450,7 @@
+   
+   arg1 = (RakNet::RakPeer::RemoteSystemStruct *)jarg1; 
+   result =  ((arg1)->reliabilityLayer);
+-  jresult = new ReliabilityLayer((const ReliabilityLayer &)result); 
++  jresult = new ReliabilityLayer(); // TODO compile error: new ReliabilityLayer((const ReliabilityLayer &)result);
+   return jresult;
+ }
+ 
+Only in SwigOutput1: CplusDLLIncludes.patch
